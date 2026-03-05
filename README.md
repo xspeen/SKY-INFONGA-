@@ -28,7 +28,7 @@ SKY-INFONGA is a comprehensive weather intelligence platform that provides real-
 1. **Clone the repository**
 ```bash
 git clone https://github.com/xspeen/SKY-INFONGA-.git
-cd SKY-INFONGA
+cd SKY-INFONGA-/
 ```
 
 1. Install dependencies
