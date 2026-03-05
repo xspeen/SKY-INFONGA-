@@ -74,7 +74,7 @@ On Termux (Android)
 pkg update && pkg upgrade
 pkg install python git
 git clone https://github.com/xspeen/SKY-INFONGA-.git
-cd SKY-INFONGA
+cd SKY-INFONGA-/
 pip install -r requirements.txt
 python app.py
 ```
@@ -85,7 +85,7 @@ On Kali Linux
 sudo apt update
 sudo apt install python3 python3-pip git
 git clone https://github.com/xspeen/SKY-INFONGA-.git
-cd SKY-INFONGA
+cd SKY-INFONGA-/
 pip3 install -r requirements.txt
 python3 app.py
 ```
