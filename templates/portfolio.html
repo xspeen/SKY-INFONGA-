@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>SKY-INFONGA - Portfolio</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="theme-toggle">
+        <input type="checkbox" id="themeSwitch" class="theme-switch">
+        <label for="themeSwitch" class="switch-label">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+            <span class="ball"></span>
+        </label>
+    </div>
+
+    <div class="portfolio-container">
+        <header class="portfolio-header">
+            <div class="logo-container">
+                <img src="https://iili.io/qnH95mv.jpg" alt="SKY-INFONGA" class="portfolio-logo" onerror="this.src='https://via.placeholder.com/150?text=SKY-INFONGA'">
+                <svg class="weather-station-svg" viewBox="0 0 100 100" width="50" height="50">
+                    <circle cx="50" cy="30" r="15" fill="#f1c40f" stroke="#2c3e50" stroke-width="2"/>
+                    <rect x="45" y="45" width="10" height="40" fill="#7f8c8d" rx="2"/>
+                    <circle cx="50" cy="85" r="8" fill="#34495e"/>
+                    <line x1="20" y1="30" x2="35" y2="30" stroke="#e74c3c" stroke-width="2"/>
+                    <line x1="65" y1="30" x2="80" y2="30" stroke="#e74c3c" stroke-width="2"/>
+                    <line x1="50" y1="15" x2="50" y2="5" stroke="#e74c3c" stroke-width="2"/>
+                </svg>
+            </div>
+            <h1 class="portfolio-title">SKY-INFONGA</h1>
+            <p class="portfolio-subtitle">Advanced Weather Intelligence Platform</p>
+        </header>
+
+        <section class="documentation-section">
+            <h2 class="section-title"><i class="fas fa-book"></i> Documentation</h2>
+            <div class="doc-content">
+                <div class="doc-card">
+                    <i class="fas fa-cloud-sun fa-3x"></i>
+                    <h3>Real-Time Weather Data</h3>
+                    <p>Get accurate, real-time weather information from any location worldwide using OpenWeather API integration.</p>
+                </div>
+                <div class="doc-card">
+                    <i class="fas fa-map-marked-alt fa-3x"></i>
+                    <h3>Geolocation Services</h3>
+                    <p>Powered by OpenCage Geocoding API for precise location detection and country flags.</p>
+                </div>
+                <div class="doc-card">
+                    <i class="fas fa-shield-alt fa-3x"></i>
+                    <h3>Security Intelligence</h3>
+                    <p>Shodan API integration for additional network intelligence (optional feature).</p>
+                </div>
+                <div class="doc-card">
+                    <i class="fas fa-mobile-alt fa-3x"></i>
+                    <h3>Cross-Platform Support</h3>
+                    <p>Works seamlessly on Android, iOS, Windows, Linux, and Termux environments.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <h2 class="section-title"><i class="fas fa-star"></i> Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-temperature-high"></i>
+                    <span>Current Temperature</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-wind"></i>
+                    <span>Wind Speed & Direction</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-tint"></i>
+                    <span>Humidity Levels</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-sun"></i>
+                    <span>Sunrise & Sunset</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-eye"></i>
+                    <span>Visibility Data</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-cloud"></i>
+                    <span>Cloud Coverage</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-compress-alt"></i>
+                    <span>Pressure Readings</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-flag"></i>
+                    <span>Country Flags</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="api-requirements">
+            <h2 class="section-title"><i class="fas fa-key"></i> API Keys Required</h2>
+            <div class="api-cards">
+                <div class="api-card">
+                    <i class="fas fa-cloud-sun-rain fa-2x"></i>
+                    <h4>OpenWeather API</h4>
+                    <p>Get your free API key from <a href="https://openweathermap.org/api" target="_blank">OpenWeather</a></p>
+                </div>
+                <div class="api-card">
+                    <i class="fas fa-map-pin fa-2x"></i>
+                    <h4>OpenCage API</h4>
+                    <p>Register at <a href="https://opencagedata.com/" target="_blank">OpenCage</a> for geocoding</p>
+                </div>
+                <div class="api-card optional">
+                    <i class="fas fa-shield-virus fa-2x"></i>
+                    <h4>Shodan API (Optional)</h4>
+                    <p>Get from <a href="https://www.shodan.io/" target="_blank">Shodan</a> for network intelligence</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="continue-container">
+            <button class="continue-btn" onclick="window.location.href='/dashboard'">
+                <span>Continue to Dashboard</span>
+                <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
