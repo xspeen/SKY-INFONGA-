@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>SKY-INFONGA - Dashboard</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="theme-toggle">
+        <input type="checkbox" id="themeSwitch" class="theme-switch">
+        <label for="themeSwitch" class="switch-label">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+            <span class="ball"></span>
+        </label>
+    </div>
+
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <img src="https://iili.io/qnH95mv.jpg" alt="SKY-INFONGA" class="dashboard-logo" onerror="this.src='https://via.placeholder.com/80?text=SI'">
+            <h1>Weather Intelligence Dashboard</h1>
+        </header>
+
+        <div class="input-container">
+            <h2><i class="fas fa-search-location"></i> Enter Location</h2>
+            <div class="input-group">
+                <input type="text" id="cityInput" placeholder="Enter city or country name..." class="city-input">
+                <button id="searchBtn" class="search-btn">
+                    <i class="fas fa-search"></i> Search
+                </button>
+            </div>
+        </div>
+
+        <!-- API Keys Modal -->
+        <div id="apiModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3><i class="fas fa-key"></i> Enter API Keys</h3>
+                    <span class="close-modal">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <p class="info-text">To fetch weather data, please enter your API keys:</p>
+                    
+                    <div class="api-input-group">
+                        <label for="openweatherKey">
+                            <i class="fas fa-cloud-sun"></i> OpenWeather API Key *
+                        </label>
+                        <input type="password" id="openweatherKey" class="api-input" placeholder="Enter your OpenWeather API key">
+                        <small>Get it from: <a href="https://openweathermap.org/api" target="_blank">OpenWeather</a></small>
+                    </div>
+
+                    <div class="api-input-group">
+                        <label for="opencageKey">
+                            <i class="fas fa-map-pin"></i> OpenCage API Key *
+                        </label>
+                        <input type="password" id="opencageKey" class="api-input" placeholder="Enter your OpenCage API key">
+                        <small>Get it from: <a href="https://opencagedata.com/" target="_blank">OpenCage</a></small>
+                    </div>
+
+                    <div class="api-input-group">
+                        <label for="shodanKey">
+                            <i class="fas fa-shield-alt"></i> Shodan API Key (Optional)
+                        </label>
+                        <input type="password" id="shodanKey" class="api-input" placeholder="Enter your Shodan API key">
+                        <small>Get it from: <a href="https://www.shodan.io/" target="_blank">Shodan</a></small>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="submitKeys" class="submit-keys-btn">
+                        <i class="fas fa-check-circle"></i> Submit & Continue
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Loading Modal -->
+        <div id="loadingModal" class="modal">
+            <div class="modal-content loading-content">
+                <div class="loader">
+                    <div class="weather-loader">
+                        <i class="fas fa-cloud-sun fa-4x"></i>
+                        <div class="loading-spinner"></div>
+                    </div>
+                </div>
+                <h3>Initializing Weather Engine</h3>
+                <div class="loading-logs">
+                    <p class="log-entry"><i class="fas fa-check-circle"></i> Validating API keys...</p>
+                    <p class="log-entry"><i class="fas fa-check-circle"></i> Connecting to OpenWeather...</p>
+                    <p class="log-entry"><i class="fas fa-check-circle"></i> Fetching location data...</p>
+                    <p class="log-entry"><i class="fas fa-check-circle"></i> Analyzing weather patterns...</p>
+                    <p class="log-entry"><i class="fas fa-check-circle"></i> Generating results...</p>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
